@@ -1,0 +1,114 @@
+<style>
+		@import url("css-family=Roboto-400,700&subset=cyrillic.css")/*tpa=https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic*/;
+
+		* {
+			transition: all .2s ease-in-out;
+		}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-color: #202020;
+			background-image: url(bg.jpg)/*tpa=http://nonewsongsoxxxymiron.com/bg.jpg*/;
+			background-repeat: no-repeat;
+			background-position: 90% 10vh;
+			background-size: auto 92vh;
+			background-attachment: fixed;
+		}
+
+		@media (max-width: 768px) {
+			body {
+				background-position: -120% 10vh;
+			}
+		}
+
+		.title {
+			color: #eee;
+			font-weight: bold;
+			font-size: 1em;
+			margin-top: 17vh;
+		}
+
+		@media (max-width: 768px) {
+			.title {
+				margin-top: 7vh;
+			}
+		}
+
+		h1 {
+			color: #ec5538;
+			font-size: 2.2em;
+		}
+
+		.counter {
+			margin-bottom: 10vh;
+		}
+
+		.wrap {
+			display: inline-block;
+		}
+
+		.number {
+			font-size: 5em;
+			font-weight: bold;
+			margin-bottom: 0;
+			color: #fff;
+		}
+
+		.caption {
+			text-transform: uppercase;
+			font-size: .7em;
+			letter-spacing: .22em;
+			color: #676767;
+			text-align: center;
+		}
+
+		.author {
+			position: fixed;
+			bottom: 0;
+			margin: 0;
+			line-height: 4em;
+			font-size: .7em;
+			background: #202020;
+			border-radius: .2em .2em 0 0;
+			padding: 0 2em;
+		}
+
+		.author, .author a {
+			color: #424242;
+		}
+
+		.author a {
+			text-decoration: none;
+			border-bottom: 1px solid rgba(170, 170, 170, .2);
+		}
+
+		.author a:hover {
+			color: #eee;
+			border-bottom-color: rgba(238, 238, 238, .6);
+		}
+
+		.last p, .record p {
+			margin-bottom: 10vh;
+		}
+
+		.last p, .record p {
+			margin-top: -6vh;
+			color: #929292;
+			font-size: 1em;
+		}
+
+		.record p {
+			margin-top: -8vh;
+		}
+
+		.last span, .record span {
+			color: #eee;
+			border-bottom: 1px dashed rgba(238, 238, 238, .2);
+		}
+
+		.last span:hover, .record span:hover {
+			cursor: help;
+			color: #fff;
+			border-bottom: 1px dashed rgba(255, 255, 255, .6);
+		}
+	</style>

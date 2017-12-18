@@ -6,121 +6,10 @@
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico-" tppabs="http://oxxxymiron.com/favicon.ico?">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
+	<link href="style.css" rel="stylesheet">
 	
-	<style>
-		@import url("css-family=Roboto-400,700&subset=cyrillic.css")/*tpa=https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic*/;
-
-		* {
-			transition: all .2s ease-in-out;
-		}
-
-		body {
-			font-family: 'Roboto', sans-serif;
-			background-color: #202020;
-			background-image: url(bg.jpg)/*tpa=http://oxxxymiron.com/bg.jpg*/;
-			background-repeat: no-repeat;
-			background-position: 90% 10vh;
-			background-size: auto 92vh;
-			background-attachment: fixed;
-		}
-
-		@media (max-width: 768px) {
-			body {
-				background-position: -120% 10vh;
-			}
-		}
-
-		.title {
-			color: #eee;
-			font-weight: bold;
-			font-size: 1em;
-			margin-top: 17vh;
-		}
-
-		@media (max-width: 768px) {
-			.title {
-				margin-top: 7vh;
-			}
-		}
-
-		h1 {
-			color: #ec5538;
-			font-size: 2.2em;
-		}
-
-		.counter {
-			margin-bottom: 10vh;
-		}
-
-		.wrap {
-			display: inline-block;
-		}
-
-		.number {
-			font-size: 5em;
-			font-weight: bold;
-			margin-bottom: 0;
-			color: #fff;
-		}
-
-		.caption {
-			text-transform: uppercase;
-			font-size: .7em;
-			letter-spacing: .22em;
-			color: #676767;
-			text-align: center;
-		}
-
-		.author {
-			position: fixed;
-			bottom: 0;
-			margin: 0;
-			line-height: 4em;
-			font-size: .7em;
-			background: #202020;
-			border-radius: .2em .2em 0 0;
-			padding: 0 2em;
-		}
-
-		.author, .author a {
-			color: #424242;
-		}
-
-		.author a {
-			text-decoration: none;
-			border-bottom: 1px solid rgba(170, 170, 170, .2);
-		}
-
-		.author a:hover {
-			color: #eee;
-			border-bottom-color: rgba(238, 238, 238, .6);
-		}
-
-		.last p, .record p {
-			margin-bottom: 10vh;
-		}
-
-		.last p, .record p {
-			margin-top: -6vh;
-			color: #929292;
-			font-size: 1em;
-		}
-
-		.record p {
-			margin-top: -8vh;
-		}
-
-		.last span, .record span {
-			color: #eee;
-			border-bottom: 1px dashed rgba(238, 238, 238, .2);
-		}
-
-		.last span:hover, .record span:hover {
-			cursor: help;
-			color: #fff;
-			border-bottom: 1px dashed rgba(255, 255, 255, .6);
-		}
-	</style>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -187,59 +76,8 @@
 		</div>
 	</div>
 
-	<script>
-		/*
-
-		20 Apr 2016 4:01 pm
-		14 Sep 2017 9:44 am
-		21 Sep 2017 7:21 pm
-		26 Sep 2017 8:37 pm
-
-		*/
-
-		var lastRelease = '28 Sep 2017 11:49 pm UTC+3';
-
-		function getTimeDifference(lastReleaseDate) {
-			var t =  Date.parse(new Date()) - Date.parse(lastReleaseDate);
-
-			var seconds = Math.floor((t / 1000) % 60);
-			var minutes = Math.floor((t / 1000 / 60) % 60);
-			var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-			var days = Math.floor(t / (1000 * 60 * 60 * 24));
-
-			return {
-				'total': t,
-				'days': days,
-				'hours': hours,
-				'minutes': minutes,
-				'seconds': seconds
-			};
-		}
-
-		function initializeClock(id, lastReleaseDate) {
-			var clock = document.getElementById(id);
-
-			var daysCount = clock.querySelector('.days');
-			var hoursCount = clock.querySelector('.hours');
-			var minutesCount = clock.querySelector('.minutes');
-			var secondsCount = clock.querySelector('.seconds');
-
-			function updateClock() {
-				var t = getTimeDifference(lastReleaseDate);
-
-				daysCount.innerHTML = t.days;
-				hoursCount.innerHTML = ('0' + t.hours).slice(-2);
-				minutesCount.innerHTML = ('0' + t.minutes).slice(-2);
-				secondsCount.innerHTML = ('0' + t.seconds).slice(-2);
-			}
-
-			updateClock();
-			var timeinterval = setInterval(updateClock, 1000);
-		}
-
-		window.onload = function() {
-			initializeClock('counter', new Date(lastRelease));
-		}
-	</script>
+	<script src="shetcik.js"></script>
+	
+	
 </body>
 </html>
